@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Registration Form</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    form {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    span {
+      color: red;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="myForm">
+    <h2> 🎓Registration Form 🧑🏻‍🎓</h2>
+
+    <label>Name:</label>
+    <input type="text" id="name">
+    <span id="nameError"></span><br>
+
+    <label>Email:</label>
+    <input type="text" id="email">
+    <span id="emailError"></span><br>
+
+   
+
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+    <span id="genderError"></span><br><br>
+
+    <label>Date of Birth:</label>
+    <input type="date" id="dob">
+    <span id="dobError"></span><br>
+
+    <label>Course:</label>
+    <select id="course">
+      <option value="">--Select Course--</option>
+      <option>HTML & CSS</option>
+      <option>JavaScript</option>
+      <option>React JS</option>
+      <option>Python</option>
+    </select>
+    <span id="courseError"></span><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+ <script src="script.js"></script>
+</body>
+</html>
